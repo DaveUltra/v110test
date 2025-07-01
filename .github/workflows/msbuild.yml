@@ -19,7 +19,7 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
 
-    - run: msbuild v110test.sln /property:Configuration=Release
+    - run: msbuild v110test.sln /p:PlatformToolset=v142 /property:Configuration=Release
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
